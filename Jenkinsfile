@@ -1,10 +1,11 @@
+def username = 'Jenkins'
+
 pipeline {
     agent any
 
     stages {
         stage('Build') {
             steps {
-                def username = 'Jenkins'
                 echo 'Building..'
                 echo "Hello, ${username}"
             }
