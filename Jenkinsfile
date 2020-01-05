@@ -1,9 +1,22 @@
 pipeline {
-    agent any 
+    agent any
+
     stages {
-        stage('Stage 1') {
+        stage('Build') {
             steps {
-                echo 'Hello world!' 
+                def username = 'Jenkins'
+                echo 'Building..'
+                echo "Hello, ${username}"
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
